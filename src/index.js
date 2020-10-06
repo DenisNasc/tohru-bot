@@ -27,12 +27,13 @@ client.on('message', async message => {
   const [type, ...params] = contentSplited[1].split(' ')
 
   switch (command) {
-    case 'nyanpasu': {
-      message.reply('nyanpasuuu >.<')
+    case 'renge': {
+      require('./commands/renge')(message, type)
+
       break
     }
     case 'figueiredo': {
-      require('./services/handleFigueiredo')(message, type, params[0] || 1)
+      require('./commands/figueiredo')(message, type, params[0] || 1)
       break
     }
     default: {

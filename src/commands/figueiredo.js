@@ -11,14 +11,16 @@ const handleFigueiredo = async (message, type, cigarettes) => {
 
       let allCigarettes = await db('figueiredo').sum('cigarettes')
       allCigarettes = allCigarettes[0]['sum(`cigarettes`)']
-      await message.reply(
+
+      const messageSent = await message.channel.send(
         `Figueiredo ficou mais perto da morte ${cigarettes} vez(es) hoje. No total foram ${allCigarettes}. F`
       )
+      await messageSent.react('🤦🏼‍♀️')
 
       break
     }
     default: {
-      message.reply('O comando figueiredo não possui esse tipo')
+      message.reply('o comando figueiredo não possui esse tipo')
       break
     }
   }
