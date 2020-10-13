@@ -5,7 +5,8 @@
   "license": "MIT",
   "scripts": {
     "start": "NODE_ENV=production node ./build && node ./build",
-    "build": "yarn run tsc",
+    "build-dev": "yarn run tsc",
+    "build": "npm run tsc",
     "dev": "NODE_ENV=development nodemon ./build"
   },
   "devDependencies": {
