@@ -1,19 +1,23 @@
 {
-  "env": {
-    "es6": true,
-    "node": true
-  },
-  "extends": ["standard", "prettier", "prettier/standard"],
-  "globals": {
-    "Atomics": "readonly",
-    "SharedArrayBuffer": "readonly"
-  },
-  "parserOptions": {
-    "ecmaVersion": 2018,
-    "sourceType": "module"
-  },
-  "plugins": ["prettier"],
-  "rules": {
-    "no-unused-vars": ["warn", {"vars": "all", "args": "after-used", "ignoreRestSiblings": false}]
-  }
+    "env": {
+        "es6": true,
+        "node": true
+    },
+    "extends": [
+        "standard"
+    ],
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly"
+    },
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaVersion": 2018,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "@typescript-eslint"
+    ],
+    "rules": {
+    }
 }
